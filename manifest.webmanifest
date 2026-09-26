@@ -1,0 +1,41 @@
+{
+  "id": "./index.html",
+  "name": "Zoom-Zoom",
+  "short_name": "Zoom-Zoom",
+  "description": "Zoom-Zoom, powered by Mikasolution. Un voyage dans le temps, de l’époque romaine à aujourd’hui.",
+  "lang": "fr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#1d2b27",
+  "theme_color": "#1d2b27",
+  "categories": [
+    "education",
+    "navigation",
+    "travel"
+  ],
+  "icons": [
+    {
+      "src": "zz-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "zz-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "zz-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "logo.svg?v=zz",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

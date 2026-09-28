@@ -1,5 +1,5 @@
 /* Zoom-Zoom — service worker : appli disponible hors ligne + cartes déjà vues en cache */
-const VERSION = 'mika-v50';
+const VERSION = 'mika-v65';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './logo.svg', './zz-icon-192.png', './zz-icon-512.png', './rome-dare.json', './rome-plus.json', './medieval-routes.json',
   'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css'];
 const TILE_HOSTS = /data\.geopf\.fr\/wmts|tile\.openstreetmap\.org|arcgisonline\.com|dh\.gu\.se|opentopomap\.org|geoservices\.brgm\.fr|upload\.wikimedia\.org/;
@@ -48,7 +48,7 @@ self.addEventListener('fetch', e => {
   }
   if (req.mode === 'navigate') {
     e.respondWith(new Promise(res => {
-      let done = false; const net = fetch(req).then(r => put(req, r));
+      let done = false; const net = fetch(req).then(r => put(req.url.includes('?') ? new Request(req.url.split('?')[0]) : req, r));
       const fallback = () => caches.match(req, {ignoreSearch: true}).then(h => h || caches.match('./index.html')).then(h => { if (h && !done) { done = true; res(h); } return h; });
       const t = setTimeout(fallback, 2500);
       net.then(r => { clearTimeout(t); if (!done) { done = true; res(r); } })

@@ -1,5 +1,5 @@
 /* Zoom-Zoom — service worker : appli disponible hors ligne + cartes déjà vues en cache */
-const VERSION = 'mika-v92-lien';
+const VERSION = 'mika-v92';
 const SHELL = ['./', './index.html', './lib/leaflet.min.js', './lib/leaflet.min.css', './manifest.webmanifest', './logo.svg', './zz-icon-192.png', './zz-icon-512.png', './rome-dare.json', './rome-plus.json', './medieval-routes.json',
   'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css'];
 const TILE_HOSTS = /data\.geopf\.fr\/wmts|tile\.openstreetmap\.org|arcgisonline\.com|dh\.gu\.se|opentopomap\.org|geoservices\.brgm\.fr|upload\.wikimedia\.org/;

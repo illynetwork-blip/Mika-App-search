@@ -1,8 +1,8 @@
 {
   "id": "./index.html",
-  "name": "Arckavia",
-  "short_name": "Arckavia",
-  "description": "Arckavia, powered by Lumerya Solution. Un voyage dans le temps, de l’époque romaine à aujourd’hui.",
+  "name": "Voutéo",
+  "short_name": "Voutéo",
+  "description": "Voutéo, powered by Lumerya Solution. La clé de voûte de vos découvertes.",
   "lang": "fr",
   "start_url": "./index.html",
   "scope": "./",
